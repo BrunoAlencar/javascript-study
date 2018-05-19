@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Array</title>
+</head>
+
+<body>
+  <script>
+    const array = new Array('a', 'b', 'c');
+    const array2 = ['a', 'b', 'd'];
+    // console.log('Construtor',array.constructor)
+    // console.log('Tamanho do array', array.length);
+
+    Array.prototype.toUpper = function () {
+        for (i = 0; i < this.length; i++){
+            this[i] = this[i].toUpperCase();
+        } 
+    }
+    array2.toUpper()
+    // console.log('To upper case', array2)
+
+    Array.prototype.isValidArray = function () {
+        return Array.isArray(this) 
+    }
+    console.log('is array', array.isValidArray())
+
+
+
+  </script>
+</body>
+
+</html>
